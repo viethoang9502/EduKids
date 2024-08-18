@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Exo-2-Black';
+    src: url('/assets/fonts/Exo-2-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Áp dụng phông chữ Fredoka cho toàn bộ dự án */
+  body {
+    font-family:  sans-serif;
+    font-weight: 900;
+  }
+  

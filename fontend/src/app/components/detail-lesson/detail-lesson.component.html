@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div class="lesson-container">
+  <div class="lesson-header">
+    <h1 class="lesson-title">{{ lesson?.name }}</h1>
+    <p class="lesson-description">{{ lesson?.description }}</p>
+  </div>  
+  <div class="lesson-content" *ngIf="lesson">
+    <div class="lesson-media">
+      <!-- Image Section -->
+      <div class="media-container">
+        <img [src]="lesson.lesson_images[currentImageIndex].image_url" class="media-image" alt="Media Image">
+      </div>
+      <!-- Video Section -->
+      <div class="video-container">
+        <video [src]="lesson.lesson_videos[currentVideoIndex].video_url" class="lesson-video" controls (timeupdate)="onTimeUpdate($event)"></video>
+      </div>
+    </div>
+    <!-- Media Controls -->
+    <div class="media-controls">
+      <!-- Previous and Next buttons for Images -->
+      <button class="btn btn-previous" (click)="previousImage()">
+        <i class="fas fa-chevron-left"></i> Image
+      </button>
+      <button class="btn btn-next" (click)="nextImage()">
+         Image&nbsp;
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <!-- Previous and Next buttons for Videos -->
+      <button class="btn btn-previous" (click)="previousVideo()">
+        <i class="fas fa-chevron-left"></i> Video
+      </button>
+      <button class="btn btn-next" (click)="nextVideo()">
+        Video&nbsp;
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    <!-- Progress Bar -->
+    <div class="lesson-progress">
+      <label for="progress">Tiến trình Video:</label>
+      <input type="range" id="progress" [value]="progress" min="0" max="100" readonly>
+    </div>
+    <!-- Action Buttons -->
+    <div class="lesson-actions">
+      <button class="btn btn-favorite" (click)="addToCart()">
+        <i class="fas fa-heart"></i> Yêu thích
+      </button>
+      <button class="btn btn-start" (click)="buyNow()">
+        <i class="fas fa-play"></i> Theo dõi
+      </button>
+      <button class="btn btn-game" (click)="startGame()">
+        <i class="fas fa-puzzle-piece"></i> Trò chơi
+      </button>
+    </div>    
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,151 @@
+@import '../../styles/shared-styles.scss';
+
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$background-color: #f8f9fa;
+$text-color: #333;
+
+// Cấu trúc chính của trang
+.container {
+  background-color: $background-color;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px auto;
+  max-width: 1200px;
+
+  .intro-section {
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
+      color: $primary-color;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: $secondary-color;
+    }
+  }
+}
+
+// Thông tin học viên
+.product-header, .product-order {
+  font-size: 1.8rem;
+  color: $primary-color;
+  margin-bottom: 15px;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  font-weight: bold;
+  color: $text-color;
+}
+
+// Bảng tiến trình học tập
+table {
+  width: 100%;
+  margin-top: 15px;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: $secondary-color;
+    color: #fff;
+  }
+
+  td {
+    color: $text-color;
+  }
+
+  .product-info {
+    display: flex;
+    align-items: center;
+
+    .product-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+
+    .product-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $text-color;
+    }
+  }
+
+  .status {
+    font-size: 1rem;
+    font-weight: bold;
+    &.not_started {
+      color: #dc3545; // Đỏ cho trạng thái "Chưa bắt đầu"
+    }
+    &.in_progress {
+      color: #ffc107; // Vàng cho trạng thái "Đang học"
+    }
+    &.completed {
+      color: #28a745; // Xanh cho trạng thái "Đã hoàn thành"
+    }
+  }
+}
+
+// Phần tổng kết tiến trình
+.header-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: $text-color;
+  margin-bottom: 10px;
+
+  &.text-end {
+    text-align: end;
+  }
+}
+
+// Các nút thao tác
+.btn {
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+
+  &-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      border-color: darken($primary-color, 15%);
+    }
+  }
+
+  &-success {
+    background-color: green;
+    border-color: green;
+
+    &:hover {
+      background-color: darken(green, 10%);
+      border-color: darken(green, 15%);
+    }
+  }
+
+  &-danger {
+    background-color: red;
+    border-color: red;
+
+    &:hover {
+      background-color: darken(red, 10%);
+      border-color: darken(red, 15%);
+    }
+  }
+}

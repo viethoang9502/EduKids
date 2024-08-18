@@ -1,0 +1,67 @@
+.soccer-game {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.question-box {
+  position: absolute;
+  top: 10%; /* Điều chỉnh vị trí của câu hỏi trên canvas */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Tạo nền mờ */
+  padding: 15px;
+  border-radius: 10px;
+  z-index: 2; /* Đảm bảo câu hỏi hiển thị trên canvas */
+}
+
+.game-controls {
+  position: absolute;
+  bottom: 5%; /* Điều chỉnh vị trí của các lựa chọn */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.question {
+  font-size: 1.5em;
+  color: white;
+  font-weight: bold;
+}
+
+.option-button {
+  background-color: rgb(20 67 61 / 50%);
+  color: white;
+  border: none;
+  padding: 20px 40px; /* Tăng padding để tăng chiều cao của nút */
+  font-size: 1.5em; /* Tăng kích cỡ font chữ */
+  font-weight: 900;
+  border-radius: 8px; /* Tăng border-radius để tạo góc bo tròn hơn */
+  cursor: pointer;
+  flex: 1 1 calc(45% - 60px); /* Điều chỉnh kích thước của nút */
+  max-width: calc(45% - 60px);
+  text-align: center;
+  margin: 0 40px; 
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    background-color: #3e8e41;
+    transform: scale(0.95);
+  }
+}

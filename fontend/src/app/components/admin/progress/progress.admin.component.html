@@ -1,0 +1,109 @@
+
+<div class="container-fluid">
+    <h1>Orders Admin Page</h1>
+    <!--Đoạn này có 1 ô searchbox bên trái, 1 combobox bên phải  -->
+    <div class="row mb-3">
+      <div class="col-md-8">
+        <input type="text" 
+          class="form-control search-input" placeholder="Tìm đơn hàng" 
+          [(ngModel)]="keyword">
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primary" (click)="searchOrders()">Tìm kiếm</button>
+      </div>
+    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>User ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Note</th>
+            <th>Order Date</th>
+            <th>Status</th>
+            <th>Total Money</th>
+            <!--
+            <th>Shipping Method</th>
+            <th>Shipping Address</th>
+            
+              <th>Shipping Date</th>
+            <th>Payment Method</th>
+            -->
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(progress of progresses; track progress.id){
+            <tr>
+              <td>              
+                {{ progress.id }}</td>
+              <td>{{ progress.user_id }}</td>
+              <td>{{ progress.fullname }}</td>
+              <td>{{ progress.email }}</td>
+              <td>{{ progress.phone_number }}</td>
+              <td>{{ progress.address }}</td>
+              <td>{{ progress.note }}</td>
+              <td>{{ progress.order_date | date }}</td>
+              <td>{{ progress.status }}</td>
+              <td>{{ progress.total_money }}</td>
+              <!--
+              <td>{{ order.shipping_method }}</td>
+              <td>{{ order.shipping_address }}</td>
+              
+              <td>{{ order.shipping_date | date }}</td>
+              <td>{{ order.payment_method }}</td>
+              -->
+              <td>
+                <div style="display: flex; gap: 10px;">
+                <button 
+                  (click)="viewDetails(progress)"
+                      class="btn btn-primary">
+                      View Details
+                </button>
+                <button class="btn btn-danger" 
+                  (click)="deleteProgress(progress.id)"
+                  >Delete</button>                
+                </div>
+              </td>                        
+            </tr>
+          }          
+        </tbody>
+      </table>
+    <div class="d-flex justify-content-center">
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                @if(currentPage > 1) {
+                  <li class="page-item" >
+                    <a class="page-link" 
+                    (click)="onPageChange(1)">First</a>
+                  </li>
+                  <li class="page-item" >
+                      <a class="page-link" 
+                      (click)="onPageChange(currentPage - 1)">Previous</a>
+                  </li>
+                }
+                @for(page of visiblePages; track page) {
+                  <ng-container>
+                    <li class="page-item" [ngClass]="{'active': page === currentPage}">
+                        <a class="page-link" (click)="onPageChange(page)">{{ page }}</a>
+                    </li>
+                  </ng-container>
+                }
+                
+                @if(currentPage < totalPages) {
+                  <li class="page-item">
+                    <a class="page-link" (click)="onPageChange(currentPage + 1)">Next</a>
+                  </li>
+                  <li class="page-item">
+                      <a class="page-link" (click)="onPageChange(totalPages)">Last</a>
+                  </li>
+                }                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+      

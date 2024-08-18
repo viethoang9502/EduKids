@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<div class="soccer-game">
+  <h1 class="game-title">Trò chơi đá bóng</h1>
+
+  <div class="question-box">
+    <p class="question">{{ question }}</p>
+  </div>
+
+  <canvas #soccerCanvas width="1200" height="900"></canvas>
+
+  <div class="game-controls">
+    <button *ngFor="let option of options; let i = index" (click)="shoot(i + 1)" class="option-button">
+      {{ option }}
+    </button>
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,72 @@
+<app-header></app-header>
+<section class="section section-hero" style="margin-top: 5px;">
+  <div class="hero-box">
+    <div class="container hero-container">
+      <div class="hero-text align-center">
+        <img src="/assets/images/title.png" alt="EduKids" class="hero-title-image">
+      </div>
+      <div class="search-box">
+        <input type="text" class="form-control search-input" placeholder="   Chữ cái" [(ngModel)]="keyword">
+        <button class="btn btn-primary search-button" (click)="searchLessons()">
+          <span>SEARCH</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <div class="search-box">
+    <div class="container" style="background-image: url('/assets/images/background_2.png'); padding-top: 15px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); overflow: hidden;">
+      <div class="extra-space"></div> 
+        <div class="search-box d-flex flex-wrap justify-content-around">
+            <div *ngFor="let category of categories" class="category-label m-1">
+              <button class="btn btn-category" (click)="selectCategory(category.id)" style="border-radius: 10px; transition: transform 0.3s, background-color 0.3s;">
+                <span class="category-text">{{ category.name }}</span>
+              </button>
+           </div>
+        </div>
+       <div class="extra-space"></div> 
+    </div>
+</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6" *ngFor="let lesson of lessons">
+        <div class="lesson-item" (click)="onLessonClick(lesson.id)">
+          <img [src]="lesson.url" alt="lesson Image" class="lesson-image">
+          <h3 class="lesson-name">{{ lesson.name }}</h3>
+          <p class="lesson-description">{{ lesson.description }}</p>
+          <p class="lesson-price">{{ lesson.price }} ĐIỂM</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <nav aria-label="Page navigation">
+      <ul class="pagination">
+        <li class="page-item" *ngIf="currentPage > 0">
+          <a class="page-link" (click)="onPageChange(0)">First</a>
+        </li>
+        <li class="page-item" *ngIf="currentPage > 0">
+          <a class="page-link" (click)="onPageChange(currentPage - 1)">
+            <i class="fa fa-chevron-left"></i>
+          </a>
+        </li>
+        <ng-container *ngFor="let page of visiblePages">
+            <li class="page-item" [ngClass]="{'active': page === currentPage + 1}">
+              <a class="page-link" (click)="onPageChange(page - 1)">{{ page }}</a>
+            </li>
+          </ng-container>
+        <li class="page-item" *ngIf="currentPage < totalPages - 1">
+          <a class="page-link" (click)="onPageChange(currentPage + 1)">
+            <i class="fa fa-chevron-right"></i>
+          </a>
+        </li>
+        <li class="page-item" *ngIf="currentPage < totalPages - 1">
+          <a class="page-link" (click)="onPageChange(totalPages - 1)">Last</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<app-footer></app-footer>

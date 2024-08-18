@@ -1,0 +1,215 @@
+@import '../../styles/shared-styles.scss';
+$primary-color: #71c8ce; // Màu chủ đạo
+$secondary-color: #f6a5c0; // Màu phụ
+$background-color: #fef9f9; // Màu nền
+$text-color: #333; // Màu văn bản
+$highlight-color: #ff5722; // Màu nổi bật
+$videobold-color: #333; // Màu văn bản
+$border-radius: 15px; // Bo góc
+
+.lesson-header {
+  text-align: center;;
+  margin: 20px auto;
+  background-color: #ffffff;
+}
+
+.lesson-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #333333;
+  margin: 0;
+}
+
+.lesson-description {
+  font-size: 2.5rem;
+  color: #666666;
+}
+
+.lesson-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  gap: 20px;
+}
+
+.lesson-media {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: $border-radius;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid $primary-color;
+}
+
+.media-container, .video-container {
+  width: 750px; // Cố định chiều rộng
+  height: 500px; // Cố định chiều cao
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+img.media-image, video.lesson-video {
+  width: 700px; // Cố định chiều rộng
+  height: 500px; // Cố định chiều cao
+  border-radius: $border-radius;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.lesson-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.media-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+
+  .btn {
+    background-color: $highlight-color;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: $border-radius;
+    transition: background-color 0.3s ease;
+    
+    i {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      background-color: darken($highlight-color, 10%);
+    }
+  }
+
+  .btn-previous, .btn-next {
+    background-color: $highlight-color;
+    width: 150px;
+    justify-content: center;
+  }
+}
+
+.lesson-progress {
+  flex-grow: 1;
+  display: flex;
+  margin: 20px 0; 
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  label {
+    margin-right: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  input[type="range"] {
+    width: 80%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #d3d3d3;
+    -webkit-appearance: none;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: $primary-color;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: $primary-color;
+      cursor: pointer;
+    }
+  }
+}
+
+.lesson-actions {
+  display: flex;
+  gap: 20px;
+
+  .btn {
+    background-color: $secondary-color;
+    color: #fff;
+    border: $border-radius;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    i {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+
+    &.btn-favorite {
+      background-color: #d84b7a;
+    }
+
+    &.btn-start {
+      background-color: #4bd896;
+    }
+    &.btn-game {
+      background-color: #cc4bd8;
+    }
+  }
+}
+
+.media-controls {
+  display: flex;
+  width: 100%;
+  margin-top: 0px;
+
+  .btn {
+    background-color: $primary-color;
+    color: white;
+    border: $border-radius;
+    padding: 10px 20px;
+    border-radius: $border-radius;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Hiệu ứng chuyển cảnh
+.media-container img,
+.video-container video {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
