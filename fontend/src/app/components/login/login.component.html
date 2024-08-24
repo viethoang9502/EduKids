@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <div class="login-form mx-auto">
-                <h2 class="login-header">Đăng nhập</h2>
+                <h2 class="login-header">ĐĂNG NHẬP</h2>
                 <div class="form-group">
                     <label for="phoneNumber">Phone</label>
                     <input type="text" class="form-control" 
@@ -41,17 +41,15 @@
                   </div>
                   
                 <div class="form-group">
-                    <select class="form-control access-right"
-                        [(ngModel)]="selectedRole">
+                    <select class="form-control access-right" [(ngModel)]="selectedRole">
                         <option selected disabled>Quyền đăng nhập</option>
                         @for(role of roles; track role.name) {
-                            <option [ngValue]="role">
+                            <option [ngValue]="role" class="role-option">
                                 {{ role.name }}
                             </option>
                         }                        
                     </select>
                   </div>
-                  
                   <button 
                     type="button" 
                     (click)="login()"

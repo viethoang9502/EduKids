@@ -6,7 +6,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { LessonAdminComponent } from "./lesson/lesson.admin.component";
 import { CategoryAdminComponent } from "./category/category.admin.component";
-import { UpdateLessonAdminComponent } from "./lesson/update/update.product.admin.component";
+import { UpdateLessonAdminComponent } from "./lesson/update/update.lesson.admin.component";
 import { InsertLessonAdminComponent } from "./lesson/insert/insert.lesson.admin.component";
 import { InsertCategoryAdminComponent } from "./category/insert/insert.category.admin.component";
 import { UpdateCategoryAdminComponent } from "./category/update/update.category.admin.component";

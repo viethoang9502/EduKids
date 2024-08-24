@@ -89,7 +89,7 @@ export class HomeComponent implements OnInit {
 
           if (response && Array.isArray(response.lessons)) {
             response.lessons.forEach((lesson: Lesson) => {
-              lesson.url = `${environment.apiBaseUrl}/products/images/${lesson.thumbnail}`;
+              lesson.url = `${environment.apiBaseUrl}/lessons/images/${lesson.thumbnail}`;
             });
             this.lessons = response.lessons;
             this.totalPages = response.totalPages;

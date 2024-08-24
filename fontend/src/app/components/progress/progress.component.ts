@@ -18,6 +18,7 @@ import { inject } from '@angular/core';
 import { CouponService } from '../../services/coupon.service';
 import { ApiResponse } from '../../responses/api.response';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { ScoreService } from '../../services/score.service';
 
 @Component({
   selector: 'app-progress',
@@ -41,13 +42,14 @@ export class ProgressComponent implements OnInit {
   private tokenService = inject(TokenService);
   private formBuilder = inject(FormBuilder);
   private router = inject(Router);
+  score: number = 0; // Add a property to hold the score
 
   orderForm: FormGroup;
-  cartItems: { lesson: Lesson, quantity: number }[] = [];
+  cartItems: { lesson: Lesson; quantity: number; favorite: boolean }[] = [];
   totalAmount: number = 0;
   couponDiscount: number = 0;
   couponApplied: boolean = false;
-  cart: Map<number, number> = new Map();
+  cart: Map<number, { quantity: number; favorite: boolean }> = new Map();
   orderData: ProgressDTO = {
     user_id: 0,
     fullname: '',
@@ -62,8 +64,11 @@ export class ProgressComponent implements OnInit {
     coupon_code: '',
     cart_items: [],
   };
-
-  constructor() {
+  showForm: boolean = false;
+ 
+  constructor(
+    private scoreService: ScoreService // Inject the service
+  ) {
     this.orderForm = this.formBuilder.group({
       fullname: ['', Validators.required],
       email: ['', [Validators.email]],
@@ -74,13 +79,18 @@ export class ProgressComponent implements OnInit {
       shipping_method: ['express'],
       payment_method: ['cod']
     });
+    
   }
 
   ngOnInit(): void {
+    
     this.orderData.user_id = this.tokenService.getUserId();
     this.cart = this.cartService.getCart();
+    
     const lessonIds = Array.from(this.cart.keys());
-
+    this.scoreService.score$.subscribe(score => {
+      this.score = score;
+    });
     if (lessonIds.length === 0) {
       return;
     }
@@ -95,7 +105,8 @@ export class ProgressComponent implements OnInit {
           }
           return {
             lesson: lesson!,
-            quantity: this.cart.get(lessonId)!
+            quantity: this.cart.get(lessonId)!.quantity,
+            favorite: this.cart.get(lessonId)!.favorite // Ensure favorite status is retrieved
           };
         });
       },
@@ -106,6 +117,10 @@ export class ProgressComponent implements OnInit {
         console.error(error?.error?.message ?? '');
       }
     });
+  }
+
+  toggleForm(): void {
+    this.showForm = !this.showForm;
   }
 
   placeOrder() {
@@ -166,11 +181,31 @@ export class ProgressComponent implements OnInit {
     }
   }
 
-  private updateCartFromCartItems(): void {
-    this.cart.clear();
-    this.cartItems.forEach((item) => {
-      this.cart.set(item.lesson.id, item.quantity);
+private updateCartFromCartItems(): void {
+  this.cart.clear();
+  this.cartItems.forEach((item) => {
+    this.cart.set(item.lesson.id, {
+      quantity: item.quantity,
+      favorite: item.favorite // Preserve the favorite status
     });
-    this.cartService.setCart(this.cart);
+  });
+  this.cartService.setCart(this.cart);
+}
+
+toggleFavorite(lessonId: number): void {
+  const cartItem = this.cart.get(lessonId);
+  console.log(`Toggling favorite for lesson ID: ${lessonId}`);
+  if (cartItem) {
+    cartItem.favorite = !cartItem.favorite; // Toggle the favorite status
+    console.log(`Favorite status: ${cartItem.favorite}`);
+
+    this.cart.set(lessonId, cartItem); // Update the cart with the new favorite status
+    this.cartService.setCart(this.cart); // Persist the cart updates
+    
+    // Cập nhật lại `cartItems` để Angular render lại giao diện
+    this.cartItems = this.cartItems.map(item => 
+      item.lesson.id === lessonId ? { ...item, favorite: cartItem.favorite } : item
+      );
+    }
   }
 }

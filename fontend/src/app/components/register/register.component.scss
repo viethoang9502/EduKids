@@ -1,45 +1,51 @@
 @import '../../styles/shared-styles.scss';
 
 .container {
+    margin-top: 20px;
     color: white;
-    height: 100vh;    
-}
-
-.register-form {
-    background-color: $shopapp-background-color;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 500px;
-    border: 1px solid rgb(32, 34, 60);
+    // height: 90vh;
     align-items: center;
     justify-content: center;
 }
 
+.register-form {
+    background-color: #71c8ce;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    color: white;
+    margin-bottom: 40px;
+}
+
 .register-header {
     text-align: center;
-    /*      color: rgb(233, 66, 178);*/
-    color: $shopapp-title-color;
-    margin-bottom: 20px;
-
+    color: white; /* Màu đỏ tươi cho tiêu đề */
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .label-text {
-    color: rgb(243, 165, 42);
+    color: #f39c12; /* Màu vàng cho nhãn */
 }
 
 .form-control {
-    background-color: transparent;
-    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 .form-control:focus {
     color: white;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.3);
     outline: none;
-    box-shadow: none;
-    border-color: transparent;
-    padding-left: 0;
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .password-field {
@@ -49,14 +55,14 @@
 .password-toggle {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 15px;
     transform: translateY(-50%);
-    color: $shopapp-title-color;
+    color: #ecf0f1;
     cursor: pointer;
 }
 
 .checkbox-text {
-    color: rgb(243, 165, 42);
+    color: #f39c12;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,52 +72,68 @@
 /* Màu checkbox khi được chọn */
 .checkbox-text input[type="checkbox"]:checked {
     border-color: white;
-    background-color: $shopapp-tint-color;
+    background-color: #e67e22; /* Màu cam khi được chọn */
 }
 
 .form-check-input {
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 .register-link {
-    color: $shopapp-title-color;
-    text-decoration: none;
+    color: #1abc9c; /* Màu xanh ngọc cho liên kết */
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .register-button {
-    background: linear-gradient(to right, $shopapp-tint-color, $shopapp-color);
+    background: linear-gradient(to right, #e67e22, #e74c3c); /* Gradient cam đỏ cho nút */
     color: white;
     border-radius: 30px;
     width: 100%;
-    padding: 10px 0;
+    padding: 12px 0;
     margin-top: 20px;
     border: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.register-button:hover {
+    background: linear-gradient(to right, #e74c3c, #c0392b); /* Đổi màu khi hover */
 }
 
 .divider {
     height: 1px;
-    background-color: rgb(243, 165, 42);
-    /*      background-color: rgb(105, 244, 181)*/
-    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
 }
 
 .divider-nospace {
-    border-top: 1px solid white;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .form-control::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgba(243, 165, 42, 0.4);
+    color: rgba(255, 255, 255, 0.6);
     opacity: 1;
-    /* Firefox */
 }
 
 .form-control:-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: rgba(243, 165, 42, 0.4);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .form-control::-ms-input-placeholder {
     /* Microsoft Edge */
-    color: rgba(243, 165, 42, 0.4);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.text-danger {
+    color: #e74c3c; /* Màu đỏ nổi bật cho cảnh báo */
+    font-size: 14px;
+    margin-top: 5px;
 }

@@ -8,6 +8,7 @@ import { UserResponse } from '../../responses/user/user.response';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';  
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -29,6 +30,7 @@ export class HeaderComponent implements OnInit{
     private userService: UserService,       
     private tokenService: TokenService,    
     private router: Router,
+    private cartService: CartService
   ) {
     
    }
@@ -48,6 +50,7 @@ export class HeaderComponent implements OnInit{
       this.router.navigate(['/user-profile']);                      
     } else if (index === 2) {
       this.userService.removeUserFromLocalStorage();
+      this.cartService.clearLocalStorageCart(); // Clear the cart from localStorage
       this.tokenService.removeToken();
       this.userResponse = this.userService.getUserResponseFromLocalStorage();    
     }

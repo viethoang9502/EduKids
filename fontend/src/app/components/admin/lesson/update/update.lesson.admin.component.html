@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h3>Update Lesson</h3>
+      <form (ngSubmit)="updateProduct()">
+        <!-- Lesson Name -->
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" [(ngModel)]="updatedProduct.name" name="name" class="form-control" required>
+        </div>
+
+        <!-- Max Score -->
+        <div class="form-group mb-3">
+          <label for="price">Max Score:</label>
+          <input type="text" id="price" [(ngModel)]="updatedProduct.price" name="price" class="form-control col-md-3" required>
+        </div>
+
+        <!-- Description -->
+        <div class="form-group mb-3">
+          <label for="description">Description:</label>
+          <textarea id="description" [(ngModel)]="updatedProduct.description" name="description" class="form-control" required></textarea>
+        </div>
+
+        <!-- Category -->
+        <div class="form-group mb-3">
+          <label for="category">Category:</label>
+          <select id="category" [(ngModel)]="updatedProduct.category_id" name="category" class="form-control" required>
+            <option *ngFor="let category of categories; track: category.id" [value]="category.id">{{ category.name }}</option>
+          </select>
+        </div>
+
+        <!-- Images Section -->
+        <h4>Image Lesson</h4>
+        <div class="form-group mb-3">
+          <label for="images">Add images (up to 5):</label>
+          <input type="file" id="images" name="images" multiple (change)="onFileChange($event)" accept="image/*">
+        </div>
+        <div class="row mb-3">
+          <div class="thumbnail-container d-flex justify-content-center flex-wrap">
+            <div *ngFor="let productImage of lesson.lesson_images; let i = index" class="position-relative m-2">
+              <img [src]="productImage.image_url" class="img-thumbnail" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer;" (click)="thumbnailClick(i)">
+              <button type="button" class="btn btn-danger btn-sm position-absolute top-0 end-0" (click)="deleteImage(productImage, $event)">×</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Videos Section -->
+        <div class="form-group mb-3">
+          <label for="videos">Add Videos (up to 5):</label>
+          <input type="file" id="videos" name="videos" multiple (change)="onVideoChange($event)" accept="video/*">
+        </div>
+        <div *ngIf="lesson.lesson_videos && lesson.lesson_videos.length > 0" class="mb-4">
+          <h4>Video Lesson</h4>
+          <div class="d-flex justify-content-center mb-3">
+            <button type="button" class="btn btn-secondary me-2" (click)="previousVideo()"><</button>
+            <video [src]="lesson.lesson_videos[currentVideoIndex].video_url" controls class="img-fluid" style="max-height: 400px;"></video>
+            <button type="button" class="btn btn-secondary ms-2" (click)="nextVideo()">></button>
+          </div>
+          <div class="d-flex justify-content-center flex-wrap">
+            <div *ngFor="let vid of lesson.lesson_videos; let i = index" class="m-2 position-relative">
+              <video [src]="vid.video_url" class="img-thumbnail" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer;" (click)="showVideo(i)" muted></video>
+              <button type="button" class="btn btn-danger btn-sm position-absolute top-0 end-0" (click)="deleteVideo(vid, $event)">×</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+    </div>
+  </div>
+</div>

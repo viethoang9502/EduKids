@@ -67,8 +67,10 @@ export class LessonService {
     return this.http.post<ApiResponse>(`${this.apiBaseUrl}/lessons/uploads/videos/${lessonId}`, formData);
   }
 
-
   deleteProductImage(id: number): Observable<any> {
     return this.http.delete<string>(`${this.apiBaseUrl}/lesson_images/${id}`);
+  }
+  deleteProductVideo(id: number): Observable<any> {
+    return this.http.delete<string>(`${this.apiBaseUrl}/lesson_videos/${id}`);
   }
 }

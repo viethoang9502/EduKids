@@ -14,6 +14,11 @@
       {{ option }}
     </button>
   </div>
+
+  <div class="score-box">
+    <p>Điểm số: {{ score }}</p>
+  </div>
 </div>
 
+<button *ngIf="lessonGames.length > 1" (click)="nextGame()" class="next-game-button">Chuyển sang trò chơi tiếp theo</button>
 <app-footer></app-footer>

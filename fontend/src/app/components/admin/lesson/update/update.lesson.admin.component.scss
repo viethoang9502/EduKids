@@ -1,0 +1,60 @@
+.thumbnail-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.thumbnail-item {
+    width: 120px;
+    height: 120px;
+    margin-right: 5px;
+    /* Thêm khoảng cách ngang giữa các ảnh */
+}
+
+.thumbnail-item:last-child {
+    margin-right: 0;
+    /* Xóa khoảng cách ngang ở ảnh cuối cùng */
+}
+
+.thumbnail-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail-item.active {
+    border: 4px solid green;
+}
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.thumbnail-item {
+  position: relative;
+  margin: 10px;
+}
+
+.thumbnail-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.remove-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.remove-image i {
+  font-size: 1.5rem;
+}

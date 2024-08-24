@@ -1,0 +1,374 @@
+2024-08-20 20:40:59.454 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-20 20:40:59.746 [main] INFO  c.project.eduapp.EduappApplication - Starting EduappApplication v0.0.1-SNAPSHOT using Java 17.0.10 with PID 17040 (C:\Users\Admin\IdeaProjects\EduKids\backend\target\shopapp-0.0.1-SNAPSHOT.jar started by Admin in C:\Users\Admin\IdeaProjects\EduKids)
+2024-08-20 20:40:59.749 [main] INFO  c.project.eduapp.EduappApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-20 20:41:10.907 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-20 20:41:10.915 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20 20:41:12.607 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1643 ms. Found 13 JPA repository interfaces.
+2024-08-20 20:41:13.360 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-20 20:41:13.364 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-20 20:41:13.689 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.eduapp.repositories.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-20 20:41:13.694 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.eduapp.repositories.CommentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-20 20:41:13.695 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.eduapp.repositories.CouponConditionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-20 20:41:13.696 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.eduapp.repositories.CouponRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-20 20:41:13.697 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.eduapp.repositories.FavoriteRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-20 20:41:13.763 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.eduapp.repositories.LessonRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-20 20:41:13.767 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.eduapp.repositories.ProductImageRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-20 20:41:13.768 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.eduapp.repositories.ProductVideoRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-20 20:41:13.773 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.eduapp.repositories.ProgressDetailRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-20 20:41:13.783 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.eduapp.repositories.ProgressRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-20 20:41:13.786 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.eduapp.repositories.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-20 20:41:13.794 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.eduapp.repositories.TokenRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-20 20:41:13.797 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.eduapp.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-20 20:41:13.798 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 146 ms. Found 0 Redis repository interfaces.
+2024-08-20 20:41:20.473 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2024-08-20 20:41:20.519 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2024-08-20 20:41:20.542 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-20 20:41:20.543 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-08-20 20:41:21.048 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-20 20:41:21.053 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 20121 ms
+2024-08-20 20:41:24.062 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20 20:41:24.886 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+2024-08-20 20:41:24.896 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2024-08-20 20:41:25.922 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-08-20 20:41:26.345 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20 20:41:26.401 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-20 20:41:26.999 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@277b8fa4
+2024-08-20 20:41:27.005 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-20 20:41:28.195 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2024-08-20 20:41:28.502 [main] INFO  c.p.e.configurations.RedisConfig - redisHost = localhost, redisPort = 6379
+2024-08-20 20:41:32.872 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-20 20:41:32.930 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20 20:41:36.149 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-20 20:41:44.811 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/api/v1/actuator'
+2024-08-20 20:41:45.070 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20 20:41:45.845 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.CategoryController.deleteCategory(java.lang.Long) throws java.lang.Exception
+2024-08-20 20:41:45.851 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.CategoryController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.CategoryController.deleteCategory(java.lang.Long) throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:45.936 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.CategoryController.createCategory(com.project.eduapp.dtos.CategoryDTO,org.springframework.validation.BindingResult)
+2024-08-20 20:41:45.937 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.CategoryController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.CategoryController.createCategory(com.project.eduapp.dtos.CategoryDTO,org.springframework.validation.BindingResult)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:45.939 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.CategoryController.updateCategory(java.lang.Long,com.project.eduapp.dtos.CategoryDTO)
+2024-08-20 20:41:45.941 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.CategoryController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.CategoryController.updateCategory(java.lang.Long,com.project.eduapp.dtos.CategoryDTO)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:46.093 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.CommentController.updateComment(java.lang.Long,com.project.eduapp.dtos.CommentDTO) throws java.lang.Exception
+2024-08-20 20:41:46.094 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.CommentController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.CommentController.updateComment(java.lang.Long,com.project.eduapp.dtos.CommentDTO) throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:46.098 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.CommentController.insertComment(com.project.eduapp.dtos.CommentDTO)
+2024-08-20 20:41:46.099 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.CommentController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.CommentController.insertComment(com.project.eduapp.dtos.CommentDTO)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:46.629 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductController.findFavoriteProductsByUserId() throws java.lang.Exception
+2024-08-20 20:41:46.630 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.ProductController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductController.findFavoriteProductsByUserId() throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:46.637 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductController.createProduct(com.project.eduapp.dtos.ProductDTO,org.springframework.validation.BindingResult) throws java.lang.Exception
+2024-08-20 20:41:46.638 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.ProductController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductController.createProduct(com.project.eduapp.dtos.ProductDTO,org.springframework.validation.BindingResult) throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:46.645 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductController.unlikeProduct(java.lang.Long) throws java.lang.Exception
+2024-08-20 20:41:46.645 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.ProductController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductController.unlikeProduct(java.lang.Long) throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:46.646 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductController.likeProduct(java.lang.Long) throws java.lang.Exception
+2024-08-20 20:41:46.647 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.ProductController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductController.likeProduct(java.lang.Long) throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:46.648 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductController.deleteProduct(long)
+2024-08-20 20:41:46.648 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.ProductController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductController.deleteProduct(long)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:46.649 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductController.updateProduct(long,com.project.eduapp.dtos.ProductDTO) throws java.lang.Exception
+2024-08-20 20:41:46.651 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.ProductController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductController.updateProduct(long,com.project.eduapp.dtos.ProductDTO) throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:46.652 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductController.uploadVideos(java.lang.Long,java.util.List) throws java.lang.Exception
+2024-08-20 20:41:46.654 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.ProductController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductController.uploadVideos(java.lang.Long,java.util.List) throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:46.655 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductController.uploadImages(java.lang.Long,java.util.List) throws java.lang.Exception
+2024-08-20 20:41:46.655 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.ProductController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductController.uploadImages(java.lang.Long,java.util.List) throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:46.689 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductImageController.delete(java.lang.Long) throws java.lang.Exception
+2024-08-20 20:41:46.691 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.ProductImageController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProductImageController.delete(java.lang.Long) throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:47.352 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProgressController.createOrder(com.project.eduapp.dtos.OrderDTO,org.springframework.validation.BindingResult) throws java.lang.Exception
+2024-08-20 20:41:47.353 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.ProgressController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProgressController.createOrder(com.project.eduapp.dtos.OrderDTO,org.springframework.validation.BindingResult) throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:47.368 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProgressController.deleteOrder(java.lang.Long)
+2024-08-20 20:41:47.369 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.ProgressController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProgressController.deleteOrder(java.lang.Long)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:47.374 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProgressController.updateOrder(long,com.project.eduapp.dtos.OrderDTO) throws java.lang.Exception
+2024-08-20 20:41:47.377 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.ProgressController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProgressController.updateOrder(long,com.project.eduapp.dtos.OrderDTO) throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:47.630 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProgressDetailController.deleteOrderDetail(java.lang.Long)
+2024-08-20 20:41:47.632 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.ProgressDetailController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProgressDetailController.deleteOrderDetail(java.lang.Long)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:47.642 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProgressDetailController.updateOrderDetail(java.lang.Long,com.project.eduapp.dtos.OrderDetailDTO) throws com.project.eduapp.exceptions.DataNotFoundException,java.lang.Exception
+2024-08-20 20:41:47.814 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.ProgressDetailController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProgressDetailController.updateOrderDetail(java.lang.Long,com.project.eduapp.dtos.OrderDetailDTO) throws com.project.eduapp.exceptions.DataNotFoundException,java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:47.816 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProgressDetailController.createOrderDetail(com.project.eduapp.dtos.OrderDetailDTO) throws java.lang.Exception
+2024-08-20 20:41:47.816 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.ProgressDetailController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.ProgressDetailController.createOrderDetail(com.project.eduapp.dtos.OrderDetailDTO) throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:49.264 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.UserController.resetPassword(long)
+2024-08-20 20:41:49.272 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.UserController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.UserController.resetPassword(long)]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:49.356 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.UserController.blockOrEnable(long,int) throws java.lang.Exception
+2024-08-20 20:41:49.357 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.UserController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.UserController.blockOrEnable(long,int) throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:49.360 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.UserController.getAllUser(java.lang.String,int,int) throws java.lang.Exception
+2024-08-20 20:41:49.361 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.UserController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.UserController.getAllUser(java.lang.String,int,int) throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:49.363 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.UserController.getUserDetails(java.lang.String) throws java.lang.Exception
+2024-08-20 20:41:49.364 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.UserController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.UserController.getUserDetails(java.lang.String) throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:49.366 [main] DEBUG o.s.s.a.p.PrePostAnnotationSecurityMetadataSource - @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ROLE_ADMIN\') or hasRole(\'ROLE_USER\')") found on specific method: public org.springframework.http.ResponseEntity com.project.eduapp.controllers.UserController.updateUserDetails(java.lang.Long,com.project.eduapp.dtos.UpdateUserDTO,java.lang.String) throws java.lang.Exception
+2024-08-20 20:41:49.367 [main] DEBUG o.s.s.a.m.DelegatingMethodSecurityMetadataSource - Caching method [CacheKey[com.project.eduapp.controllers.UserController; public org.springframework.http.ResponseEntity com.project.eduapp.controllers.UserController.updateUserDetails(java.lang.Long,com.project.eduapp.dtos.UpdateUserDTO,java.lang.String) throws java.lang.Exception]] with attributes [[authorize: 'hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')', filter: 'null', filterTarget: 'null']]
+2024-08-20 20:41:52.603 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Or [Mvc [pattern='EndpointRequestMatcher includes=[*], excludes=[], includeLinks=true']] with [org.springframework.security.web.session.DisableEncodeUrlFilter@159a32a4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ceb368b, org.springframework.security.web.context.SecurityContextHolderFilter@2d7df55, org.springframework.security.web.header.HeaderWriterFilter@cbd3871, org.springframework.security.web.authentication.logout.LogoutFilter@42e32feb, com.project.eduapp.filters.JwtTokenFilter@47ab3688, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b8ba6b7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@509e0253, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ddc5857, org.springframework.security.web.access.ExceptionTranslationFilter@6441cff1, org.springframework.security.web.access.intercept.AuthorizationFilter@15e881c0]
+2024-08-20 20:41:52.672 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2024-08-20 20:42:00.615 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-08-20 20:42:01.156 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-20 20:42:01.157 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-20 20:42:01.157 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1724161321152
+2024-08-20 20:42:04.017 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2024-08-20 20:42:04.045 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-08-20 20:42:04.046 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-20 20:42:04.046 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-08-20 20:42:04.161 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2024-08-20 20:42:05.153 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+2024-08-20 20:42:05.457 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-groupA-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = groupA
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2024-08-20 20:42:05.625 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-20 20:42:05.626 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-20 20:42:05.626 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1724161325625
+2024-08-20 20:42:05.721 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-groupA-1, groupId=groupA] Subscribed to topic(s): get-all-categories, insert-a-category
+2024-08-20 20:42:05.886 [main] INFO  c.project.eduapp.EduappApplication - Started EduappApplication in 68.445 seconds (process running for 72.609)
+2024-08-20 20:42:05.961 [groupA-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-groupA-1, groupId=groupA] Resetting the last seen epoch of partition get-all-categories-0 to 0 since the associated topicId changed from null to rMZ0bNUsTHK4hE3iocrNLQ
+2024-08-20 20:42:05.963 [groupA-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-groupA-1, groupId=groupA] Resetting the last seen epoch of partition insert-a-category-0 to 0 since the associated topicId changed from null to 05CKPHgETdipEGuZv96b9g
+2024-08-20 20:42:05.965 [groupA-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-groupA-1, groupId=groupA] Cluster ID: LaiJbAFjSMWRFq6MEyXiqA
+2024-08-20 20:42:05.970 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Discovered group coordinator 127.0.0.1:9092 (id: 2147483646 rack: null)
+2024-08-20 20:42:05.974 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] (Re-)joining group
+2024-08-20 20:42:06.042 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Request joining group due to: need to re-join with the given member-id: consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1
+2024-08-20 20:42:06.043 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2024-08-20 20:42:06.044 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] (Re-)joining group
+2024-08-20 20:42:06.524 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Successfully joined group with generation Generation{generationId=194, memberId='consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1', protocol='range'}
+2024-08-20 20:42:06.603 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Successfully synced group in generation Generation{generationId=194, memberId='consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1', protocol='range'}
+2024-08-20 20:42:06.612 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Notifying assignor about the new Assignment(partitions=[])
+2024-08-20 20:42:06.612 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Adding newly assigned partitions: 
+2024-08-20 20:42:06.615 [groupA-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - groupA: partitions assigned: []
+2024-08-20 20:45:22.777 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Request joining group due to: group is already rebalancing
+2024-08-20 20:45:22.779 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Revoke previously assigned partitions 
+2024-08-20 20:45:22.781 [groupA-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - groupA: partitions revoked: []
+2024-08-20 20:45:22.782 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] (Re-)joining group
+2024-08-20 20:45:22.788 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Successfully joined group with generation Generation{generationId=195, memberId='consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1', protocol='range'}
+2024-08-20 20:45:22.808 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Finished assignment for group at generation 195: {consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1=Assignment(partitions=[get-all-categories-0, insert-a-category-0])}
+2024-08-20 20:45:22.817 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Successfully synced group in generation Generation{generationId=195, memberId='consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1', protocol='range'}
+2024-08-20 20:45:22.818 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Notifying assignor about the new Assignment(partitions=[get-all-categories-0, insert-a-category-0])
+2024-08-20 20:45:22.824 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Adding newly assigned partitions: get-all-categories-0, insert-a-category-0
+2024-08-20 20:45:22.843 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Setting offset for partition get-all-categories-0 to the committed offset FetchPosition{offset=670, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}
+2024-08-20 20:45:22.844 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Setting offset for partition insert-a-category-0 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}
+2024-08-20 20:45:22.846 [groupA-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - groupA: partitions assigned: [get-all-categories-0, insert-a-category-0]
+2024-08-20 20:49:11.405 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Request joining group due to: group is already rebalancing
+2024-08-20 20:49:11.406 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Revoke previously assigned partitions get-all-categories-0, insert-a-category-0
+2024-08-20 20:49:11.406 [groupA-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - groupA: partitions revoked: [get-all-categories-0, insert-a-category-0]
+2024-08-20 20:49:11.406 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] (Re-)joining group
+2024-08-20 20:49:11.414 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Successfully joined group with generation Generation{generationId=196, memberId='consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1', protocol='range'}
+2024-08-20 20:49:11.415 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Finished assignment for group at generation 196: {consumer-groupA-1-d8d6e331-5017-4da8-8ad8-7374aa981a19=Assignment(partitions=[get-all-categories-0, insert-a-category-0]), consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1=Assignment(partitions=[])}
+2024-08-20 20:49:11.422 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Successfully synced group in generation Generation{generationId=196, memberId='consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1', protocol='range'}
+2024-08-20 20:49:11.424 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Notifying assignor about the new Assignment(partitions=[])
+2024-08-20 20:49:11.424 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Adding newly assigned partitions: 
+2024-08-20 20:49:11.425 [groupA-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - groupA: partitions assigned: []
+2024-08-20 20:49:20.500 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Request joining group due to: group is already rebalancing
+2024-08-20 20:49:20.500 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Revoke previously assigned partitions 
+2024-08-20 20:49:20.500 [groupA-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - groupA: partitions revoked: []
+2024-08-20 20:49:20.501 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] (Re-)joining group
+2024-08-20 20:49:20.521 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Successfully joined group with generation Generation{generationId=197, memberId='consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1', protocol='range'}
+2024-08-20 20:49:20.522 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Finished assignment for group at generation 197: {consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1=Assignment(partitions=[get-all-categories-0, insert-a-category-0])}
+2024-08-20 20:49:20.541 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Successfully synced group in generation Generation{generationId=197, memberId='consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1', protocol='range'}
+2024-08-20 20:49:20.541 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Notifying assignor about the new Assignment(partitions=[get-all-categories-0, insert-a-category-0])
+2024-08-20 20:49:20.541 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Adding newly assigned partitions: get-all-categories-0, insert-a-category-0
+2024-08-20 20:49:20.573 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Setting offset for partition get-all-categories-0 to the committed offset FetchPosition{offset=670, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}
+2024-08-20 20:49:20.573 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Setting offset for partition insert-a-category-0 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}
+2024-08-20 20:49:20.574 [groupA-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - groupA: partitions assigned: [get-all-categories-0, insert-a-category-0]
+2024-08-20 20:49:59.631 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Request joining group due to: group is already rebalancing
+2024-08-20 20:49:59.633 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Revoke previously assigned partitions get-all-categories-0, insert-a-category-0
+2024-08-20 20:49:59.635 [groupA-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - groupA: partitions revoked: [get-all-categories-0, insert-a-category-0]
+2024-08-20 20:49:59.636 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] (Re-)joining group
+2024-08-20 20:49:59.647 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Successfully joined group with generation Generation{generationId=198, memberId='consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1', protocol='range'}
+2024-08-20 20:49:59.650 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Finished assignment for group at generation 198: {consumer-groupA-1-bad0cf88-96f1-4b68-bb47-a11c55b04d8c=Assignment(partitions=[get-all-categories-0, insert-a-category-0]), consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1=Assignment(partitions=[])}
+2024-08-20 20:49:59.680 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Successfully synced group in generation Generation{generationId=198, memberId='consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1', protocol='range'}
+2024-08-20 20:49:59.680 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Notifying assignor about the new Assignment(partitions=[])
+2024-08-20 20:49:59.681 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Adding newly assigned partitions: 
+2024-08-20 20:49:59.681 [groupA-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - groupA: partitions assigned: []
+2024-08-20 20:51:05.970 [groupA-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-groupA-1, groupId=groupA] Node -1 disconnected.
+2024-08-20 20:59:33.288 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Request joining group due to: group is already rebalancing
+2024-08-20 20:59:33.314 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Revoke previously assigned partitions 
+2024-08-20 20:59:33.317 [groupA-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - groupA: partitions revoked: []
+2024-08-20 20:59:33.318 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] (Re-)joining group
+2024-08-20 20:59:33.744 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Successfully joined group with generation Generation{generationId=199, memberId='consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1', protocol='range'}
+2024-08-20 20:59:33.748 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Finished assignment for group at generation 199: {consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1=Assignment(partitions=[get-all-categories-0, insert-a-category-0])}
+2024-08-20 20:59:34.036 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Successfully synced group in generation Generation{generationId=199, memberId='consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1', protocol='range'}
+2024-08-20 20:59:34.052 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Notifying assignor about the new Assignment(partitions=[get-all-categories-0, insert-a-category-0])
+2024-08-20 20:59:34.053 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Adding newly assigned partitions: get-all-categories-0, insert-a-category-0
+2024-08-20 20:59:34.815 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Setting offset for partition get-all-categories-0 to the committed offset FetchPosition{offset=670, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}
+2024-08-20 20:59:34.816 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Setting offset for partition insert-a-category-0 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}
+2024-08-20 20:59:34.936 [groupA-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - groupA: partitions assigned: [get-all-categories-0, insert-a-category-0]
+2024-08-20 21:00:47.117 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Request joining group due to: group is already rebalancing
+2024-08-20 21:00:47.118 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Revoke previously assigned partitions get-all-categories-0, insert-a-category-0
+2024-08-20 21:00:47.124 [groupA-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - groupA: partitions revoked: [get-all-categories-0, insert-a-category-0]
+2024-08-20 21:00:47.126 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] (Re-)joining group
+2024-08-20 21:00:47.157 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Successfully joined group with generation Generation{generationId=200, memberId='consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1', protocol='range'}
+2024-08-20 21:00:47.159 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Finished assignment for group at generation 200: {consumer-groupA-1-f3b4eee8-82b9-4eee-9dfd-83d67ea82981=Assignment(partitions=[get-all-categories-0, insert-a-category-0]), consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1=Assignment(partitions=[])}
+2024-08-20 21:00:47.192 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Successfully synced group in generation Generation{generationId=200, memberId='consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1', protocol='range'}
+2024-08-20 21:00:47.196 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Notifying assignor about the new Assignment(partitions=[])
+2024-08-20 21:00:47.198 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Adding newly assigned partitions: 
+2024-08-20 21:00:47.200 [groupA-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - groupA: partitions assigned: []
+2024-08-20 21:01:20.360 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Request joining group due to: group is already rebalancing
+2024-08-20 21:01:20.361 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Revoke previously assigned partitions 
+2024-08-20 21:01:20.362 [groupA-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - groupA: partitions revoked: []
+2024-08-20 21:01:20.362 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] (Re-)joining group
+2024-08-20 21:01:20.368 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Successfully joined group with generation Generation{generationId=201, memberId='consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1', protocol='range'}
+2024-08-20 21:01:20.368 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Finished assignment for group at generation 201: {consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1=Assignment(partitions=[get-all-categories-0, insert-a-category-0])}
+2024-08-20 21:01:20.375 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Successfully synced group in generation Generation{generationId=201, memberId='consumer-groupA-1-feb19d01-5c30-4620-8964-f62e812d3ce1', protocol='range'}
+2024-08-20 21:01:20.375 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Notifying assignor about the new Assignment(partitions=[get-all-categories-0, insert-a-category-0])
+2024-08-20 21:01:20.377 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Adding newly assigned partitions: get-all-categories-0, insert-a-category-0
+2024-08-20 21:01:20.385 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Setting offset for partition get-all-categories-0 to the committed offset FetchPosition{offset=670, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}
+2024-08-20 21:01:20.385 [groupA-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-groupA-1, groupId=groupA] Setting offset for partition insert-a-category-0 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}
+2024-08-20 21:01:20.386 [groupA-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - groupA: partitions assigned: [get-all-categories-0, insert-a-category-0]

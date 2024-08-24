@@ -64,4 +64,34 @@
     background-color: #3e8e41;
     transform: scale(0.95);
   }
+
+}
+  
+.next-game-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #71c8ce;
+  color: white;
+  font-size: 18px;
+  align-items: center;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+
+  &:hover {
+    background-color: #71c8ce;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    background-color: #71c8ce;
+    transform: scale(1.02);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  }
 }

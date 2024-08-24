@@ -119,9 +119,9 @@ export class LoginComponent implements OnInit{
                 date_of_birth: new Date(apiResponse2.data.date_of_birth),
               };    
               this.userService.saveUserResponseToLocalStorage(this.userResponse); 
-              if(this.userResponse?.role.name == 'admin') {
-                this.router.navigate(['/admin']);    
-              } else if(this.userResponse?.role.name == 'user') {
+              if(this.userResponse?.role.name == 'ADMIN') {
+                this.router.navigate(['/admin/progresses']);    
+              } else if(this.userResponse?.role.name == 'USER') {
                 this.router.navigate(['/']);                      
               }
               

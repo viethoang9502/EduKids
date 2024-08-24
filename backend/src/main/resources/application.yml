@@ -1,5 +1,5 @@
 server:
-  port: 8088
+  port: 8099
 spring:
   datasource:
     url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3307/EduApp?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true}

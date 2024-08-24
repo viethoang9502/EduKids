@@ -11,6 +11,7 @@ import { UserProfileComponent } from './components/user-profile/user.profile.com
 import { AdminComponent } from './components/admin/admin.component';
 import { AuthGuardFn } from './guards/auth.guard';
 import { AdminGuardFn } from './guards/admin.guard';
+import { GameSoccerComponent } from './components/game-soccer/game-soccer.component';
 // import { GameSoccerComponent } from './components/game-soccer/game-soccer.component';
 //import { ProgressAdminComponent } from './components/admin/order/order.admin.component';
 
@@ -22,7 +23,7 @@ export const routes: Routes = [
   { path: 'progresses', component: ProgressComponent,canActivate:[AuthGuardFn] },
   { path: 'user-profile', component: UserProfileComponent, canActivate:[AuthGuardFn] },
   { path: 'progresses/:id', component: ProgressDetailComponent },
-  // { path: 'gamesocers/:id', component: GameSoccerComponent },
+  { path: 'gamesocers/:id', component: GameSoccerComponent },
   //Admin   
   { 
     path: 'admin', 

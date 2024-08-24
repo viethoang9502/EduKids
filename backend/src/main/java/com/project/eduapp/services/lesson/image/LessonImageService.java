@@ -19,7 +19,7 @@ public class LessonImageService implements ILessonImageService{
         Optional<LessonMedia> productImage = productImageRepository.findById(id);
         if(productImage.isEmpty()) {
             throw new DataNotFoundException(
-                    String.format("Cannot find product image with id: %ld", id)
+                    String.format("Cannot find product image with id: %d", id)
             );
         }
         productImageRepository.deleteById(id);

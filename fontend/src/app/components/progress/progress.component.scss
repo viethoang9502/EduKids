@@ -2,7 +2,7 @@
 
 // Thiết lập màu sắc
 // Thiết lập màu sắc
-$primary-color: #007bff;
+$primary-color: #71c8ce;
 $secondary-color: #6c757d;
 $background-color: #f8f9fa;
 $text-color: #333;
@@ -123,6 +123,15 @@ $text-color: #333;
     font-weight: bold;
     color: $text-color;
   }
+}
+
+.favorite-button {
+  margin-left:20px;
+  background: none; /* Loại bỏ nền của nút */
+  border: none; /* Loại bỏ viền của nút */
+  font-size: 24px; /* Điều chỉnh kích thước của biểu tượng trái tim */
+  cursor: pointer; /* Thay đổi con trỏ khi di chuột qua nút */
+  padding: 0; /* Loại bỏ padding mặc định */
 }
 
 // Bảng thông tin khóa học

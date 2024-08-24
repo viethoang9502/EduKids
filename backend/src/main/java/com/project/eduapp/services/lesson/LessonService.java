@@ -173,9 +173,7 @@ public class LessonService implements ILessonService {
                     "Number of images must be <= "
                             + LessonMedia.MAXIMUM_IMAGES_PER_PRODUCT);
         }
-        if (existingProduct.getThumbnail() == null ) {
-            existingProduct.setThumbnail(newProductImage.getVideoUrl());
-        }
+
         productRepository.save(existingProduct);
         return productVideoRepository.save(newProductImage);
     }

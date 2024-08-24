@@ -58,35 +58,20 @@ export class InsertLessonAdminComponent implements OnInit {
   }
 
   onFileChange(event: any) {
-    // Retrieve selected files from input element
-    const files = event.target.files;
-    // Limit the number of selected files to 5
-    if (files.length > 5) {
-      console.error('Please select a maximum of 5 images.');
-      return;
-    }
-    // Store the selected files in the newProduct object
-    this.insertProductDTO.images = files;
+    this.insertProductDTO.images = Array.from(event.target.files);
   }
 
   onVideoChange(event: any) {
-    // Retrieve selected files from input element
-    const files = event.target.files;
-    // Limit the number of selected files to 5
-    if (files.length > 5) {
-      console.error('Please select a maximum of 5 images.');
-      return;
-    }
-    // Store the selected files in the newProduct object
-    this.insertProductDTO.videos = files;
+    this.insertProductDTO.videos = Array.from(event.target.files);
   }
 
   insertProduct() {    
     this.lessonService.insertProduct(this.insertProductDTO).subscribe({
       next: (apiResponse: ApiResponse) => {
+        const productId = apiResponse.data.id; // Assuming the response contains the newly created product's ID
+
         debugger
         if (this.insertProductDTO.images.length > 0) {
-          const productId = apiResponse.data.id; // Assuming the response contains the newly created product's ID
           this.lessonService.uploadImages(productId, this.insertProductDTO.images).subscribe({
             next: (imageResponse:ApiResponse) => {
               debugger
@@ -102,7 +87,6 @@ export class InsertLessonAdminComponent implements OnInit {
           })          
         }
         if (this.insertProductDTO.videos.length > 0) {
-          const productId = apiResponse.data.id; // Assuming the response contains the newly created product's ID
           this.lessonService.uploadVideos(productId, this.insertProductDTO.videos).subscribe({
             next: (videoResponse:ApiResponse) => {
               debugger
@@ -118,6 +102,7 @@ export class InsertLessonAdminComponent implements OnInit {
           })          
         }
       },
+      
       error: (error: HttpErrorResponse) => {
         debugger;
         console.error(error?.error?.message ?? '');
