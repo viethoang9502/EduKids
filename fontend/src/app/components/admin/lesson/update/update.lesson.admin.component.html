@@ -25,8 +25,8 @@
         <div class="form-group mb-3">
           <label for="category">Category:</label>
           <select id="category" [(ngModel)]="updatedProduct.category_id" name="category" class="form-control" required>
-            <option *ngFor="let category of categories; track: category.id" [value]="category.id">{{ category.name }}</option>
-          </select>
+            <option *ngFor="let category of categories" [value]="category?.id">{{ category?.name }}</option>
+          </select>          
         </div>
 
         <!-- Images Section -->

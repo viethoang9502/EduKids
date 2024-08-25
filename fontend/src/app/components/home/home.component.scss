@@ -65,7 +65,7 @@
 .lesson-name {
     text-transform: uppercase;
     word-wrap: break-word;
-    margin: 5px 0;
+    margin: 5px 0 3px 0; /* Giảm khoảng cách dưới của lesson-name */
     font-weight: 900;
     font-size: 18px;
     color: #323232;
@@ -77,6 +77,7 @@
     -webkit-box-orient: vertical;
     word-wrap: break-word;
 }
+
 .lesson-name:hover {
     color: #71c8ce;
 }

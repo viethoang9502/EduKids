@@ -1,50 +1,49 @@
 <div class="container-fluid">
-    <header class="header bg-success text-white d-flex justify-content-between">
-      <h1 class="header-title">Dashboard Header</h1>
-      <!-- Logout Button -->
-      <button class="btn btn-danger btn-sm" (click)="logout()">Logout</button>
-    </header>
-    <div class="row">
-      <nav id="sidebar" class="col-md-2 col-lg-2 d-md-block bg-light sidebar">
-        <div class="position-sticky">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link" 
-                (click)="showAdminComponent('progresses')"
-                routerLink="/admin/progresses"
-                routerLinkActive="active">
-                <i class="fab fa-first-progress icon"></i>Progresses
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" 
-                (click)="showAdminComponent('categories')"
-                  routerLink="/admin/categories"
-                  routerLinkActive="active">
-                <i class="fab fa-canadian-maple-leaf icon"></i>Categories
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" 
-                (click)="showAdminComponent('lessons')"
-                routerLink="/admin/lessons"
-                routerLinkActive="active">
-                <i class="fab fa-codepen icon"></i>Lessons
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" 
-                (click)="showAdminComponent('users')"
-                routerLink="/admin/users"
-                routerLinkActive="active">
-                <i class="fab fa-codepen icon"></i>Users
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div class="col-md-10 col-lg-10 overflow-auto">
-        <router-outlet></router-outlet>
+  <header class="header bg-gradient-success text-white d-flex align-items-center justify-content-between p-3 shadow-sm">
+    <h1 class="header-title m-0">Teacher Home</h1>
+    <button class="btn btn-danger btn-sm shadow" (click)="logout()">Logout</button>
+  </header>
+  <div class="row">
+    <nav id="sidebar" class="col-md-2 col-lg-2 d-md-block sidebar p-0 shadow-sm">
+      <div class="position-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center" 
+              (click)="showAdminComponent('progresses')"
+              routerLink="/admin/progresses"
+              routerLinkActive="active">
+              <i class="fab fa-first-progress icon me-2"></i>Progresses
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center" 
+              (click)="showAdminComponent('categories')"
+              routerLink="/admin/categories"
+              routerLinkActive="active">
+              <i class="fab fa-canadian-maple-leaf icon me-2"></i>Categories
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center" 
+              (click)="showAdminComponent('lessons')"
+              routerLink="/admin/lessons"
+              routerLinkActive="active">
+              <i class="fab fa-codepen icon me-2"></i>Lessons
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center" 
+              (click)="showAdminComponent('users')"
+              routerLink="/admin/users"
+              routerLinkActive="active">
+              <i class="fab fa-users icon me-2"></i>Users
+            </a>
+          </li>
+        </ul>
       </div>
+    </nav>
+    <div class="col-md-10 col-lg-10 overflow-auto p-4">
+      <router-outlet></router-outlet>
     </div>
   </div>
+</div>

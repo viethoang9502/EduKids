@@ -1,39 +1,73 @@
 .container-fluid {
-    background-color: white;
+    background-color: #f8f9fa; /* Light background for the main content */
     padding-left: 0 !important; /* Remove left padding */
     padding-right: 0 !important; /* Remove right padding */
-}
-.header {
-    background-color: #333;
-    /* Header background color */
-    color: white;
-    /* Text color */
-    padding: 10px;
-    /* Add padding to the header */
-    text-align: center;
-    /* Center-align text in the header */
-}
-#sidebar {
-    background-color: #007bff !important; /* Primary color */
+  }
+  
+  .header {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient background */
     color: white; /* Text color */
-    height: 100vh;
-    overflow-y: auto; /* Add scrollbars if content overflows */
-}
-/* Custom CSS for sidebar links */
-#sidebar a {
+    padding: 10px 20px; /* Add padding to the header */
+    border-bottom: 2px solid #0056b3; /* Border at the bottom of the header */
+  }
+  
+  #sidebar {
+    background: #343a40; /* Darker sidebar background */
+    color: white; /* Text color */
+    height: 100vh; /* Full height */
+    overflow-y: auto; /* Scroll if content overflows */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for the sidebar */
+  }
+  
+  /* Custom CSS for sidebar links */
+  #sidebar a {
     color: white; /* Text color for links */
-    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Add a border line at the top of each link */
-    padding: 10px 15px; /* Add padding to links for spacing */
-}
-/* Custom CSS for active link */
-#sidebar a.active {
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Border at the top of each link */
+    padding: 15px 20px; /* Add padding to links for spacing */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  /* Custom CSS for active link */
+  #sidebar a.active {
     font-weight: bold; /* Highlight active link */
-    background-color: #0056b3;
-}
-/* Change background color on hover */
-#sidebar a:hover {
-    background-color: #0056b3; /* Change the background color on hover */
-}
-.icon {
+    background-color: #495057; /* Different background for active link */
+    box-shadow: inset 5px 0 0 #007bff; /* Highlight active link with a border */
+  }
+  
+  /* Change background color on hover */
+  #sidebar a:hover {
+    background-color: #495057; /* Change the background color on hover */
+    transform: translateX(5px); /* Slightly move the link to the right on hover */
+  }
+  
+  /* Add some spacing and alignment to the icon and text */
+  .icon {
     padding: 5px;
-}
+    font-size: 1.25rem; /* Larger icon size */
+  }
+  
+  /* Adjust padding and styling for the main content area */
+  .col-md-10, .col-lg-10 {
+    padding: 2rem; /* Add padding to the content area */
+    background-color: white; /* White background for the content area */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for the content area */
+    border-radius: 5px; /* Rounded corners for the content area */
+  }
+  
+  /* Additional styles for buttons */
+  .btn-danger {
+    background-color: #dc3545; /* Consistent danger color */
+    border-color: #dc3545;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  /* Add some margin to the bottom of each section */
+  .header-title {
+    margin-bottom: 0;
+  }
+  

@@ -57,14 +57,9 @@ export class UpdateLessonAdminComponent implements OnInit {
   getCategories(page: number, limit: number) {
     this.categoryService.getCategories(page, limit).subscribe({
       next: (apiResponse: ApiResponse) => {
-        debugger;
-        this.categories = apiResponse.data;
-      },
-      complete: () => {
-        debugger;
+        this.categories = apiResponse.data || [];
       },
       error: (error: HttpErrorResponse) => {
-        debugger;
         console.error(error?.error?.message ?? '');
       } 
     });
@@ -81,7 +76,7 @@ export class UpdateLessonAdminComponent implements OnInit {
           if (lessonImage.image_url && !lessonImage.image_url.startsWith('http')) {
             lessonImage.image_url = `${environment.apiBaseUrl}/lessons/images/${lessonImage.image_url}`;
           }
-        });
+        })
 
         // Process video URLs
         this.updatedProduct.lesson_videos.forEach((lessonVideo: LessonVideo) => {
