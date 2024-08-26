@@ -33,7 +33,7 @@ export class ProgressDTO {
 
   coupon_code: string;
 
-  cart_items: { product_id: number, quantity: number }[]; // Thêm cart_items để lưu thông tin giỏ hàng
+  cart_items: { product_id: number, quantity: number }[]; 
 
   constructor(data: any) {
     this.user_id = data.user_id;

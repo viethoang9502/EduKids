@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    apiBaseUrl: 'http://localhost:8099/api/v1',        
+    apiBaseUrl: 'https://gdtth.ibme.edu.vn/api/v1',        
 };

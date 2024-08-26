@@ -1,4 +1,4 @@
 export const environment = {
     production: true,            
-    apiBaseUrl: 'http://localhost:8099/api/v1',//Docker Ubuntu    
+    apiBaseUrl: 'https://gdtth.ibme.edu.vn/api/v1',//Docker Ubuntu    
 };
