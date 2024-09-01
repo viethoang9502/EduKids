@@ -101,7 +101,7 @@ export class ProgressComponent implements OnInit {
         this.cartItems = lessonIds.map((lessonId) => {
           const lesson = lessons.find((p) => p.id === lessonId);
           if (lesson) {
-            lesson.thumbnail = `${environment.apiBaseUrl}/Lessons/images/${lesson.thumbnail}`;
+            lesson.thumbnail = `${environment.apiBaseUrl}/lessons/images/${lesson.thumbnail}`;
           }
           return {
             lesson: lesson!,

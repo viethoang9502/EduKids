@@ -2,11 +2,11 @@ server:
   port: 8099
 spring:
   datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3307/EduApp?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true}
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/EduApp?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true}
     #url: ${SPRING_DATASOURCE_URL:jdbc:mysql://ubuntu-server-01.local:3399/ShopApp?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true}
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: Abc123456789@
+    password: 123456
   jpa:
     hibernate:
       ddl-auto: none #chỗ này mà sửa thành drop-create thì rất nguy
@@ -42,18 +42,6 @@ spring:
       host: ${REDIS_HOST:localhost} # Default to 'localhost' if not provided
       #host: ${REDIS_HOST:ubuntu-server-01.local} # Default to 'localhost' if not provided
       port: ${REDIS_PORT:6379}      # Default to 6379 if not provided
-  kafka:
-    client:
-      dns:
-        lookup: use_dns_cache
-    bootstrap-servers: ${KAFKA_BROKER_SERVER:localhost}:${KAFKA_BROKER_PORT:9092}
-    producer:
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-      #transaction-id-prefix: tx.
-      properties:
-        "[spring.json.type.mapping]": category:com.project.eduapp.models.Category
-    consumer:
-      value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
   security:
     oauth2:
       client:

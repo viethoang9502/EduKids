@@ -3,7 +3,7 @@ $primary-color: #71c8ce; // Màu chủ đạo
 $secondary-color: #f6a5c0; // Màu phụ
 $background-color: #fef9f9; // Màu nền
 $text-color: #333; // Màu văn bản
-$highlight-color: #ff5722; // Màu nổi bật
+$highlight-color: #f17048; // Màu nổi bật
 $videobold-color: #333; // Màu văn bản
 $border-radius: 15px; // Bo góc
 
@@ -52,7 +52,7 @@ $border-radius: 15px; // Bo góc
   position: relative;
 }
 
-img.media-image, video.lesson-video {
+video.lesson-video {
   width: 700px; // Cố định chiều rộng
   height: 500px; // Cố định chiều cao
   border-radius: $border-radius;
@@ -71,8 +71,9 @@ img.media-image, video.lesson-video {
 
 .media-controls {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 1300px;
   margin-top: 20px;
 
   .btn {
@@ -179,27 +180,6 @@ img.media-image, video.lesson-video {
   }
 }
 
-.media-controls {
-  display: flex;
-  width: 100%;
-  margin-top: 0px;
-
-  .btn {
-    background-color: $primary-color;
-    color: white;
-    border: $border-radius;
-    padding: 10px 20px;
-    border-radius: $border-radius;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: darken($primary-color, 10%);
-    }
-  }
-}
-
 // Hiệu ứng chuyển cảnh
 .media-container img,
 .video-container video {
@@ -212,4 +192,42 @@ img.media-image, video.lesson-video {
 
 .fade-in {
   opacity: 1;
+}
+
+img.media-image {
+  width: 700px; // Cố định chiều rộng
+  height: 500px; // Cố định chiều cao
+  border-radius: $border-radius;
+  transition: transform 0.3s ease, border 0.3s ease, top 0.3s ease, left 0.3s ease;
+  position: relative;
+
+  &.zoomed {
+    transform: translate(-50%, -50%) scaleX(1.3) scaleY(1.6); // Phóng to chiều rộng 1.5 lần, chiều dài 1.8 lần
+    border: 2px solid $secondary-color; // Thêm viền khi phóng to
+    position: fixed; // Đặt vị trí cố định để ảnh đè lên mọi thứ
+    top: 50%; // Đặt ảnh giữa màn hình theo chiều dọc
+    left: 50%; // Đặt ảnh giữa màn hình theo chiều ngang
+    z-index: 1000; // Đảm bảo ảnh nằm trên tất cả các phần tử khác
+  }
+}
+
+.zoom-btn {
+  position: absolute;
+  left: 2%; // Đặt nút sang bên trái của hình ảnh (cách mép trái một khoảng 10%)
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1010; // Đảm bảo nút nằm trên ảnh phóng to nhưng vẫn trong ảnh
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+
+img.media-image.zoomed ~ .zoom-btn {
+  top: 10px; // Điều chỉnh vị trí nút sau khi phóng to nếu cần
 }

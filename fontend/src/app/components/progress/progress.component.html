@@ -44,7 +44,7 @@
                   <div *ngIf="couponDiscount > 0" class="text-start mt-3">
                     <h6 class="header-text text-end ">Bạn được giảm giá: {{ couponDiscount | number:'1.2-2' }} đ</h6>
                 </div>
-                  <button type="submit" class="btn btn-success">Đặt hàng</button>
+                  <button (click)="placeOrder()" type="submit" class="btn btn-success">Đặt hàng</button>
                 </form>
             </div>       
             <div class="col-md-7">

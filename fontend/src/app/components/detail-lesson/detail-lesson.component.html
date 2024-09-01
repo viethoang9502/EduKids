@@ -9,6 +9,9 @@
       <!-- Image Section -->
       <div class="media-container">
         <img [src]="lesson.lesson_images[currentImageIndex].image_url" class="media-image" alt="Media Image">
+        <button class="zoom-btn" (click)="zoomImage()">
+          <i class="fas fa-search-plus"></i>
+        </button>
       </div>
       <!-- Video Section -->
       <div class="video-container">

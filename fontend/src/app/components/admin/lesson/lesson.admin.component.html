@@ -20,7 +20,7 @@
       <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Score</th>
+        <th>Level</th>
         <th>Thumbnail</th>
         <th>Description</th>
         <th>Actions</th>
@@ -30,7 +30,7 @@
       <tr *ngFor="let lesson of lessons">
         <td>{{ lesson?.id }}</td>
         <td>{{ lesson?.name }}</td>
-        <td>{{ lesson?.price | number: '1.2-2' }} đ</td>
+        <td>{{ lesson?.price }} </td>
         <td>
           <img [src]="lesson?.url" class="rounded-square" alt="Thumbnail" width="100" height="100">
         </td>

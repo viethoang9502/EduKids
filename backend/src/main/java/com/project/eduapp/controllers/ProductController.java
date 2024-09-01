@@ -246,23 +246,37 @@ public class ProductController {
             @RequestParam(defaultValue = "10") int limit
     ) throws JsonProcessingException {
         int totalPages = 0;
-        //productRedisService.clear();
-        // Tạo Pageable từ thông tin trang và giới hạn
-        PageRequest pageRequest = PageRequest.of(
-                page, limit,
-                //Sort.by("createdAt").descending()
-                Sort.by("id").ascending()
-        );
+        PageRequest pageRequest;
+
+        try {
+            // Tạo Pageable từ thông tin trang và giới hạn
+            pageRequest = PageRequest.of(
+                    page, limit,
+                    Sort.by("name").ascending()
+            );
+        } catch (Exception e) {
+            // Ghi lại thông tin lỗi và trả về phản hồi lỗi
+            logger.error("Failed to create PageRequest with sorting by 'name'.", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(
+                    ResponseObject.builder()
+                            .message("Failed to create PageRequest with sorting by 'name': " + e.getMessage())
+                            .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                            .data(null)
+                            .build()
+            );
+        }
+
         logger.info(String.format("keyword = %s, category_id = %d, page = %d, limit = %d",
                 keyword, categoryId, page, limit));
-        List<LessonResponse> productResponses = productRedisService
-                .getAllProducts(keyword, categoryId, pageRequest);
-        if (productResponses!=null && !productResponses.isEmpty()) {
+
+        List<LessonResponse> productResponses = productRedisService.getAllProducts(keyword, categoryId, pageRequest);
+
+        if (productResponses != null && !productResponses.isEmpty()) {
             totalPages = productResponses.get(0).getTotalPages();
         }
-        if(productResponses == null) {
-            Page<LessonResponse> productPage = lessonService
-                    .getAllProducts(keyword, categoryId, pageRequest);
+
+        if (productResponses == null) {
+            Page<LessonResponse> productPage = lessonService.getAllProducts(keyword, categoryId, pageRequest);
             // Lấy tổng số trang
             totalPages = productPage.getTotalPages();
             productResponses = productPage.getContent();
@@ -277,16 +291,20 @@ public class ProductController {
                     pageRequest
             );
         }
+
         LessonListResponse productListResponse = LessonListResponse
                 .builder()
                 .lessons(productResponses)
                 .totalPages(totalPages)
                 .build();
-        return ResponseEntity.ok().body(ResponseObject.builder()
-                .message("Get products successfully")
-                .status(HttpStatus.OK)
-                .data(productListResponse)
-                .build());
+
+        return ResponseEntity.ok().body(
+                ResponseObject.builder()
+                        .message("Get products successfully")
+                        .status(HttpStatus.OK)
+                        .data(productListResponse)
+                        .build()
+        );
     }
     //http://localhost:8088/api/v1/products/6
     @GetMapping("/{id}")

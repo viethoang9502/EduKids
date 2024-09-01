@@ -26,7 +26,7 @@ public class LessonRedisService implements ILessonRedisService {
         int pageNumber = pageRequest.getPageNumber();
         int pageSize = pageRequest.getPageSize();
         Sort sort = pageRequest.getSort();
-        String sortDirection = sort.getOrderFor("id")
+        String sortDirection = sort.getOrderFor("name")
                 .getDirection() == Sort.Direction.ASC ? "asc": "desc";
         String key = String.format("all_products:%s:%d:%d:%d:%s",
                 keyword, categoryId, pageNumber, pageSize, sortDirection);

@@ -40,7 +40,7 @@ public class RequestResponseLoggingFilter extends OncePerRequestFilter {
         byte[] buf = response.getContentAsByteArray();
         if (buf.length > 0) {
             String responseBody = new String(buf, 0, buf.length, response.getCharacterEncoding());
-//            logger.info("Response Body: " + responseBody);
+            logger.info("Response Body: " + responseBody);
         }
     }
 }

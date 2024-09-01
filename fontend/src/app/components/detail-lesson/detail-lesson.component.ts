@@ -26,7 +26,7 @@ import { ScoreService } from '../../services/score.service';
   ]
 })
 
-export class DetailProductComponent implements OnInit {
+export class DetailLessonComponent implements OnInit {
   lesson?: Lesson;
   productId: number = 0;
   quantity: number = 0;
@@ -191,6 +191,7 @@ export class DetailProductComponent implements OnInit {
   }           
 
   startGame(): void {
+    console.log('done');
     this.router.navigate([`/gamesocers/${this.productId}`]);
   }
 
@@ -204,5 +205,14 @@ export class DetailProductComponent implements OnInit {
       console.error('Lesson is null.');
     }
   }
- 
+
+  zoomImage(): void {
+    const imageElement = document.querySelector('img.media-image');
+    if (imageElement) {
+      imageElement.classList.toggle('zoomed');
+    }
+  }
+  
+
 }
+

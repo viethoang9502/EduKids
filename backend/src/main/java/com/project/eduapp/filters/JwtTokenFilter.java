@@ -18,6 +18,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.*;
 
 import java.io.IOException;
+import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
 
@@ -66,9 +68,11 @@ public class JwtTokenFilter extends OncePerRequestFilter{
         }catch (Exception e) {
             //response.sendError(HttpServletResponse.SC_UNAUTHORIZED, e.getMessage());
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            response.getWriter().write(e.getMessage());
+            try (OutputStream out = response.getOutputStream()) {
+                out.write(("{\"error\": \"" + e.getMessage() + "\"}").getBytes(StandardCharsets.UTF_8));
+                out.flush();
+            }
         }
-
     }
     private boolean isBypassToken(@NonNull HttpServletRequest request) {
         final List<Pair<String, String>> bypassTokens = Arrays.asList(
